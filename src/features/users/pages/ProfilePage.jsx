@@ -235,10 +235,11 @@ export default function ProfilePage() {
 
           <form onSubmit={handleProfileSubmit} className="space-y-4">
             <div>
-              <label className="block text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider mb-1.5">
+              <label htmlFor="profile-name" className="block text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider mb-1.5">
                 Nama Lengkap
               </label>
               <input
+                id="profile-name"
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -247,17 +248,18 @@ export default function ProfilePage() {
             </div>
 
             <div>
-              <label className="block text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider mb-1.5">
+              <label htmlFor="profile-email" className="block text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider mb-1.5">
                 Alamat Email
               </label>
               <input
+                id="profile-email"
                 type="email"
                 value={email}
                 disabled
+                aria-describedby="profile-email-hint"
                 className="w-full px-4 py-2.5 bg-slate-100 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-500 text-sm cursor-not-allowed"
-                title="Email tidak dapat diubah"
               />
-              <p className="text-[11px] text-slate-400 mt-1">
+              <p id="profile-email-hint" className="text-[11px] text-slate-400 mt-1">
                 Email terdaftar sebagai identitas unik akun.
               </p>
             </div>
@@ -297,10 +299,11 @@ export default function ProfilePage() {
 
           <form onSubmit={handlePasswordSubmit} className="space-y-4">
             <div>
-              <label className="block text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider mb-1.5">
+              <label htmlFor="password-old" className="block text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider mb-1.5">
                 Kata Sandi Lama
               </label>
               <input
+                id="password-old"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -310,10 +313,11 @@ export default function ProfilePage() {
             </div>
 
             <div>
-              <label className="block text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider mb-1.5">
+              <label htmlFor="password-new" className="block text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider mb-1.5">
                 Kata Sandi Baru
               </label>
               <input
+                id="password-new"
                 type="password"
                 value={newPassword}
                 onChange={(e) => setNewPassword(e.target.value)}
@@ -323,10 +327,11 @@ export default function ProfilePage() {
             </div>
 
             <div>
-              <label className="block text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider mb-1.5">
+              <label htmlFor="password-confirm" className="block text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider mb-1.5">
                 Konfirmasi Kata Sandi Baru
               </label>
               <input
+                id="password-confirm"
                 type="password"
                 value={newPasswordConfirm}
                 onChange={(e) => setNewPasswordConfirm(e.target.value)}
@@ -338,7 +343,7 @@ export default function ProfilePage() {
             <button
               type="submit"
               disabled={isChangeProfilePassword}
-              className="w-full py-2.5 px-4 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-medium text-sm shadow-md shadow-amber-600/20 transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+              className="w-full py-2.5 px-4 rounded-xl bg-amber-700 hover:bg-amber-600 text-white font-medium text-sm shadow-md shadow-amber-700/20 transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
             >
               {isChangeProfilePassword ? (
                 <>

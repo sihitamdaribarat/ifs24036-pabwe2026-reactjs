@@ -34,7 +34,7 @@ export default function AuthLayout() {
         </Link>
       </div>
 
-      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md z-10 px-4">
+      <main className="mt-8 sm:mx-auto sm:w-full sm:max-w-md z-10 px-4">
         <div className="bg-slate-800/80 backdrop-blur-xl py-8 px-6 shadow-2xl shadow-black/40 rounded-2xl border border-slate-700/60 sm:px-10">
           <Outlet />
         </div>
@@ -54,7 +54,7 @@ export default function AuthLayout() {
             <span>Cepat &amp; Mudah</span>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 }

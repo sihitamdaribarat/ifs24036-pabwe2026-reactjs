@@ -94,9 +94,9 @@ export default function UsersPage() {
           <div className="w-16 h-16 mx-auto rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-400 mb-4">
             <IconUsers className="w-8 h-8" />
           </div>
-          <h3 className="text-base font-semibold text-slate-800 dark:text-slate-200">
+          <p className="text-base font-semibold text-slate-800 dark:text-slate-200">
             Pengguna tidak ditemukan
-          </h3>
+          </p>
           <p className="text-sm text-slate-400 mt-1">
             Tidak ada pengguna yang cocok dengan kata kunci &quot;{searchTerm}&quot;.
           </p>
@@ -136,9 +136,9 @@ export default function UsersPage() {
                   </div>
 
                   <div className="min-w-0 flex-1">
-                    <h3 className="text-base font-bold text-slate-900 dark:text-white truncate">
+                    <p className="text-base font-bold text-slate-900 dark:text-white truncate">
                       {user.name}
-                    </h3>
+                    </p>
                     <div className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 mt-1 truncate">
                       <IconMail className="w-3.5 h-3.5 flex-shrink-0" />
                       <span className="truncate">{user.email}</span>

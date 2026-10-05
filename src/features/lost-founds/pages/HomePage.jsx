@@ -169,12 +169,12 @@ export default function HomePage() {
         {/* Total Card */}
         <div className="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-200 dark:border-slate-700/60 shadow-sm flex items-center justify-between">
           <div>
-            <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-300">
               Total Laporan
             </p>
-            <h3 className="text-2xl font-black text-slate-900 dark:text-white mt-1">
+            <p className="text-2xl font-black text-slate-900 dark:text-white mt-1" aria-label={`Total laporan: ${stats.total}`}>
               {stats.total}
-            </h3>
+            </p>
           </div>
           <div className="w-12 h-12 rounded-2xl bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 flex items-center justify-center">
             <IconPackage className="w-6 h-6" />
@@ -184,12 +184,12 @@ export default function HomePage() {
         {/* Lost Card */}
         <div className="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-200 dark:border-slate-700/60 shadow-sm flex items-center justify-between">
           <div>
-            <p className="text-xs font-bold uppercase tracking-wider text-rose-500">
+            <p className="text-xs font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">
               Barang Hilang
             </p>
-            <h3 className="text-2xl font-black text-slate-900 dark:text-white mt-1">
+            <p className="text-2xl font-black text-slate-900 dark:text-white mt-1" aria-label={`Barang hilang: ${stats.lost}`}>
               {stats.lost}
-            </h3>
+            </p>
           </div>
           <div className="w-12 h-12 rounded-2xl bg-rose-50 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 flex items-center justify-center">
             <IconAlertCircle className="w-6 h-6" />
@@ -199,12 +199,12 @@ export default function HomePage() {
         {/* Found Card */}
         <div className="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-200 dark:border-slate-700/60 shadow-sm flex items-center justify-between">
           <div>
-            <p className="text-xs font-bold uppercase tracking-wider text-emerald-500">
+            <p className="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
               Barang Ditemukan
             </p>
-            <h3 className="text-2xl font-black text-slate-900 dark:text-white mt-1">
+            <p className="text-2xl font-black text-slate-900 dark:text-white mt-1" aria-label={`Barang ditemukan: ${stats.found}`}>
               {stats.found}
-            </h3>
+            </p>
           </div>
           <div className="w-12 h-12 rounded-2xl bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
             <IconCheck className="w-6 h-6" />
@@ -214,12 +214,12 @@ export default function HomePage() {
         {/* Completed Card */}
         <div className="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-200 dark:border-slate-700/60 shadow-sm flex items-center justify-between">
           <div>
-            <p className="text-xs font-bold uppercase tracking-wider text-indigo-500">
+            <p className="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
               Kasus Selesai
             </p>
-            <h3 className="text-2xl font-black text-slate-900 dark:text-white mt-1">
+            <p className="text-2xl font-black text-slate-900 dark:text-white mt-1" aria-label={`Kasus selesai: ${stats.completed}`}>
               {stats.completed}
-            </h3>
+            </p>
           </div>
           <div className="w-12 h-12 rounded-2xl bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
             <IconClock className="w-6 h-6" />
@@ -362,8 +362,8 @@ export default function HomePage() {
               onClick={() => setViewMode("grid")}
               className={`p-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer ${
                 viewMode === "grid"
-                  ? "bg-white dark:bg-slate-800 text-blue-600 shadow-sm"
-                  : "text-slate-500 hover:text-slate-800"
+                  ? "bg-white dark:bg-slate-800 text-blue-700 dark:text-blue-300 shadow-sm"
+                  : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
               }`}
               title="Tampilan Kartu"
             >
@@ -374,8 +374,8 @@ export default function HomePage() {
               onClick={() => setViewMode("table")}
               className={`p-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer ${
                 viewMode === "table"
-                  ? "bg-white dark:bg-slate-800 text-blue-600 shadow-sm"
-                  : "text-slate-500 hover:text-slate-800"
+                  ? "bg-white dark:bg-slate-800 text-blue-700 dark:text-blue-300 shadow-sm"
+                  : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
               }`}
               title="Tampilan Tabel"
             >
@@ -404,8 +404,8 @@ export default function HomePage() {
                 onClick={() => setStatusFilter(opt.id)}
                 className={`px-2.5 py-1 rounded-lg font-medium transition cursor-pointer ${
                   statusFilter === opt.id
-                    ? "bg-white dark:bg-slate-800 text-blue-600 shadow-sm font-semibold"
-                    : "text-slate-500 hover:text-slate-700"
+                    ? "bg-white dark:bg-slate-800 text-blue-700 dark:text-blue-300 shadow-sm font-semibold"
+                    : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
                 }`}
               >
                 {opt.label}
@@ -425,8 +425,8 @@ export default function HomePage() {
                 onClick={() => setCompletedFilter(opt.id)}
                 className={`px-2.5 py-1 rounded-lg font-medium transition cursor-pointer ${
                   completedFilter === opt.id
-                    ? "bg-white dark:bg-slate-800 text-blue-600 shadow-sm font-semibold"
-                    : "text-slate-500 hover:text-slate-700"
+                    ? "bg-white dark:bg-slate-800 text-blue-700 dark:text-blue-300 shadow-sm font-semibold"
+                    : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
                 }`}
               >
                 {opt.label}
@@ -510,7 +510,7 @@ export default function HomePage() {
                     }`}
                   >
                     <IconPhoto className="w-12 h-12 stroke-[1.2]" />
-                    <span className="text-[11px] font-medium mt-1">
+                    <span className="text-[11px] font-medium mt-1 text-slate-500 dark:text-slate-400">
                       Belum ada foto
                     </span>
                   </div>
@@ -518,22 +518,22 @@ export default function HomePage() {
                   {/* Badges Overlay */}
                   <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
                     {item.status === "lost" ? (
-                      <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-rose-600/90 text-white backdrop-blur-md shadow-md">
+                      <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-rose-700 text-white backdrop-blur-md shadow-md">
                         Barang Hilang
                       </span>
                     ) : (
-                      <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-emerald-600/90 text-white backdrop-blur-md shadow-md">
+                      <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-emerald-700 text-white backdrop-blur-md shadow-md">
                         Barang Temuan
                       </span>
                     )}
 
                     {Number(item.is_completed) === 1 ? (
-                      <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-indigo-600/90 text-white backdrop-blur-md flex items-center gap-1 shadow-md">
+                      <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-indigo-700 text-white backdrop-blur-md flex items-center gap-1 shadow-md">
                         <IconCheck className="w-3 h-3" />
                         Selesai
                       </span>
                     ) : (
-                      <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-500/90 text-white backdrop-blur-md flex items-center gap-1 shadow-md">
+                      <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-700 text-white backdrop-blur-md flex items-center gap-1 shadow-md">
                         <IconClock className="w-3 h-3" />
                         Proses
                       </span>
