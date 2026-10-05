@@ -23,10 +23,26 @@ export default defineConfig(({ mode }) => {
     build: {
       rollupOptions: {
         output: {
-          manualChunks: {
-            "vendor-react": ["react", "react-dom", "react-router-dom"],
-            "vendor-redux": ["@reduxjs/toolkit", "react-redux"],
-            "vendor-icons": ["@tabler/icons-react"],
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              if (
+                id.includes('react') ||
+                id.includes('react-dom') ||
+                id.includes('react-router-dom')
+              ) {
+                return 'vendor-react';
+              }
+              if (
+                id.includes('@reduxjs/toolkit') ||
+                id.includes('react-redux')
+              ) {
+                return 'vendor-redux';
+              }
+              if (id.includes('@tabler/icons-react')) {
+                return 'vendor-icons';
+              }
+              return 'vendor'; // sisa library node_modules lainnya
+            }
           },
         },
       },
@@ -55,4 +71,4 @@ export default defineConfig(({ mode }) => {
       },
     },
   };
-});
+});
