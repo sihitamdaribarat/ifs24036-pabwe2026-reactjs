@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ifs24036-pabwe2026-reactjs.netlify.app/sitemap.xml

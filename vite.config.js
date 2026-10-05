@@ -20,6 +20,17 @@ export default defineConfig(({ mode }) => {
         env.VITE_DELCOM_BASEURL || "https://open-api.delcom.org/api/v1"
       ),
     },
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            "vendor-react": ["react", "react-dom", "react-router-dom"],
+            "vendor-redux": ["@reduxjs/toolkit", "react-redux"],
+            "vendor-icons": ["@tabler/icons-react"],
+          },
+        },
+      },
+    },
     test: {
       globals: true,
       environment: "jsdom",
@@ -44,4 +55,4 @@ export default defineConfig(({ mode }) => {
       },
     },
   };
-});
+});
