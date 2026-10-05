@@ -160,7 +160,7 @@ export default function DetailPage() {
           ) : (
             <div className="py-20 flex flex-col items-center justify-center text-slate-500">
               <IconPhoto className="w-16 h-16 stroke-1 mb-2" />
-              <p className="text-xs font-medium">Laporan ini belum memiliki foto cover</p>
+              <p className="text-xs font-medium text-slate-400 dark:text-slate-300">Laporan ini belum memiliki foto cover</p>
               <button
                 onClick={() => setCoverModalOpen(true)}
                 className="mt-3 px-3 py-1.5 rounded-lg bg-blue-600 text-white text-xs font-semibold hover:bg-blue-500 transition cursor-pointer"
@@ -188,7 +188,7 @@ export default function DetailPage() {
                 Sudah Selesai
               </span>
             ) : (
-              <span className="px-3 py-1.5 rounded-full text-xs font-bold bg-amber-500 text-white shadow-lg backdrop-blur-md flex items-center gap-1.5">
+              <span className="px-3 py-1.5 rounded-full text-xs font-bold bg-amber-700 text-white shadow-lg backdrop-blur-md flex items-center gap-1.5">
                 <IconClock className="w-3.5 h-3.5" />
                 Dalam Proses
               </span>

@@ -18,7 +18,7 @@ export default function AuthLayout() {
       <div className="absolute top-0 -left-40 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 -right-40 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="sm:mx-auto sm:w-full sm:max-w-md text-center z-10 px-4">
+      <header className="sm:mx-auto sm:w-full sm:max-w-md text-center z-10 px-4">
         <Link to="/" className="inline-flex items-center gap-3 group">
           <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform duration-300">
             <IconSearch className="w-6 h-6 text-white" />
@@ -32,7 +32,7 @@ export default function AuthLayout() {
             </span>
           </div>
         </Link>
-      </div>
+      </header>
 
       <main className="mt-8 sm:mx-auto sm:w-full sm:max-w-md z-10 px-4">
         <div className="bg-slate-800/80 backdrop-blur-xl py-8 px-6 shadow-2xl shadow-black/40 rounded-2xl border border-slate-700/60 sm:px-10">

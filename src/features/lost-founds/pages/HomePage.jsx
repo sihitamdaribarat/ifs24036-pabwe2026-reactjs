@@ -544,9 +544,9 @@ export default function HomePage() {
                 {/* Card Content */}
                 <div className="p-5 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 className="text-base font-bold text-slate-900 dark:text-white line-clamp-1 group-hover:text-blue-600 transition-colors">
+                    <h2 className="text-base font-bold text-slate-900 dark:text-white line-clamp-1 group-hover:text-blue-600 transition-colors">
                       {item.title}
-                    </h3>
+                    </h2>
                     <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-2 leading-relaxed">
                       {item.description}
                     </p>

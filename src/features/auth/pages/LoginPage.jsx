@@ -51,7 +51,7 @@ export default function LoginPage() {
   return (
     <div>
       <div className="mb-6 text-center">
-        <h2 className="text-2xl font-bold text-white tracking-tight">Masuk ke Akun</h2>
+        <h1 className="text-2xl font-bold text-white tracking-tight">Masuk ke Akun</h1>
         <p className="mt-1 text-sm text-slate-400">
           Kelola laporan kehilangan &amp; penemuan barang
         </p>

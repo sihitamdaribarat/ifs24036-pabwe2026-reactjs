@@ -67,7 +67,7 @@ export default function RegisterPage() {
   return (
     <div>
       <div className="mb-6 text-center">
-        <h2 className="text-2xl font-bold text-white tracking-tight">Daftar Akun Baru</h2>
+        <h1 className="text-2xl font-bold text-white tracking-tight">Daftar Akun Baru</h1>
         <p className="mt-1 text-sm text-slate-400">
           Bergabung untuk melaporkan barang hilang &amp; temuan
         </p>
