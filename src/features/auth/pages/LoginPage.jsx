@@ -60,7 +60,7 @@ export default function LoginPage() {
       <form onSubmit={handleSubmit} className="space-y-5" noValidate>
         {/* Email Field */}
         <div>
-          <label htmlFor="email" className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
+          <label htmlFor="login-email-input" className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
             Alamat Email
           </label>
           <div className="relative">
@@ -68,7 +68,7 @@ export default function LoginPage() {
               <IconMail className="w-5 h-5" />
             </div>
             <input
-              id="email"
+              id="login-email-input"
               name="email"
               type="email"
               autoComplete="email"
@@ -89,7 +89,7 @@ export default function LoginPage() {
 
         {/* Password Field */}
         <div>
-          <label htmlFor="password" className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
+          <label htmlFor="login-password-input" className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
             Kata Sandi
           </label>
           <div className="relative">
@@ -97,7 +97,7 @@ export default function LoginPage() {
               <IconLock className="w-5 h-5" />
             </div>
             <input
-              id="password"
+              id="login-password-input"
               name="password"
               type="password"
               autoComplete="current-password"
@@ -118,6 +118,7 @@ export default function LoginPage() {
 
         {/* Submit Button */}
         <button
+          id="login-submit-button"
           type="submit"
           disabled={isAuthLogin}
           className="w-full mt-2 py-3 px-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-medium shadow-lg shadow-blue-600/30 transition duration-200 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
